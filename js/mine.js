@@ -82,17 +82,14 @@ function displayData(Data)
                     <div class="item mt-5">
                         
                         <img src=https://image.tmdb.org/t/p/w500`+Data[i].poster_path+` class="img-fluid">
-
                         <div class="item2">
                           
                         <h3 class="">`+Data[i].title+`</h3>
                         <p>`+Data[i].overview+`</p>
                         <p>`+Data[i].vote_average+`</p>
                         <p>`+Data[i].release_date+`</p>
-
                         
                         </div>
-
                         
                        
                 
@@ -107,59 +104,59 @@ function displayData(Data)
             document.getElementById("rowData").innerHTML = temp;
                 
 }
- var name =document.getElementById('name');
- var email =document.getElementById('email');
- var phone =document.getElementById('phone');
- var age =document.getElementById('Age');
- var message22 =document.getElementById('message');
- var form2 =document.getElementById('myform');
- var error =document.getElementById('error')
- var error1 =document.getElementById('error1')
- var error2 =document.getElementById('error2')
- var error3 =document.getElementById('error3')
- var error4 =document.getElementById('error4')
-
- form2.addEventListener('submit', (e) =>{
-     let message =[]
-     if(name.value==='' || name.value ==null){
-         e.preventDefault()
-         message.push('Name is required')
-         error.innerHTML=message.join(', ')
-     }
+ function saveForm(){
     
+    var name =document.getElementById('name');
+    var email =document.getElementById('email');
+    var phone =document.getElementById('phone');
+    var age =document.getElementById('Age');
+    var message22 =document.getElementById('message');
+    var form2 =document.getElementById('myform');
+    var error =document.getElementById('error')
+    var error1 =document.getElementById('error1')
+    var error2 =document.getElementById('error2')
+    var error3 =document.getElementById('error3')
+    var error4 =document.getElementById('error4')
+    let message11=[]
+        if(name.value===''|| name.value == null){
+            message11.push("name is required")
+            error.innerHTML=message11.join(',')
+        }
+            
+         
+    
+         let message2 =[]
+         if(email.value==='' || email.value ==null){
+             message2.push('email is required')
+             error1.innerHTML=message2.join(', ')
+         }
+    
+         let message3 =[]
+         if(phone.value==='' || phone.value ==null){
+             message3.push('phone is required')
+             error2.innerHTML=message3.join(', ')
+         }
+         let message44=[]
+         if(age.value==='' || age.value==null ){
+             message44.push('Age not valid ')
+             error3.innerHTML=message44.join(', ')
+         }
+         if(age.value < 18){
+            message44.push('Age must be greater than 18 ')
+            error3.innerHTML=message44.join(', ')
+         }
+      
         
-     
-
-     let message2 =[]
-     if(email.value==='' || email.value ==null){
-         message2.push('email is required')
-         error1.innerHTML=message2.join(', ')
-     }
-
-     let message3 =[]
-     if(phone.value==='' || phone.value ==null){
-         message3.push('phone is required')
-         error2.innerHTML=message3.join(', ')
-     }
-     let message44=[]
-     if(age.value==='' || age.value==null ){
-         message44.push('Age not valid ')
-         error3.innerHTML=message44.join(', ')
-     }
-     if(age.value < 18){
-        message44.push('Age must be greater than 18 ')
-        error3.innerHTML=message44.join(', ')
-     }
-  
-    
-    let message33 =[]
-    if(message22.value =='' || message22.value == null){
-        message33.push('message is required')
-        error4.innerHTML=message33.join(', ')
-    }
-    if(message22.value.length > 150){
-        message33.push('Max 150 letter')
-        error4.innerHTML=message33.join(', ')
-     }
-   
- })
+        let message33 =[]
+        if(message22.value =='' || message22.value == null){
+            message33.push('message is required')
+            error4.innerHTML=message33.join(', ')
+        }
+        if(message22.value.length > 150){
+            message33.push('Max 150 letter')
+            error4.innerHTML=message33.join(', ')
+         }
+      
+         return false;
+       
+}

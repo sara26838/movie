@@ -25,27 +25,27 @@
       <section class="con" id="contact pt-5">
         <h1>CONTACT US </h1>
      
-          <form  id="myform"  method="GET" >
+          <form onsubmit='return saveForm()' id="myform"  method="GET" >
           
             <div class="row">
               <div class="col-md-6 pt-5">
-                <input type="text" class=" form-control form22" placeholder="Enter your Name" id="name" >
+                <input type="text" class=" form-control form22" placeholder="Enter your Name" id="name" required>
                 <div class="err" id="error"></div>
               </div>
               <div class="col-md-6 pt-5">
-                <input type="email" class="  form-control form22" placeholder="Enter Email" id="email" >
+                <input type="email" class="  form-control form22" placeholder="Enter Email" id="email"  required >
                 <div class="err" id="error1"></div>
               </div>
               <div class="col-md-6 pt-5">
-                  <input type="number" class=" form-control  form22" placeholder="Enter phone" id="phone" >
+                  <input type="number" class=" form-control  form22" placeholder="Enter phone" id="phone"  required >
                   <div class="err" id="error2"></div>
                 </div>
                 <div class="col-md-6 pt-5">
-                    <input type="number" class=" form-control form22" placeholder="Enter Age"id="Age" >
+                    <input type="number" class=" form-control form22" placeholder="Enter Age"id="Age"  required>
                     <div class="err"id="error3"></div>
                   </div>
                   <div class="col-md-12 pt-5">
-                    <textarea type="text" class=" form-control form22" placeholder="Enter Message" id="message"></textarea>
+                    <textarea type="text" class=" form-control form22" placeholder="Enter Message" id="message"  required></textarea>
                     <div class="err" id="error4"></div>
                   </div>
                 
