@@ -4,10 +4,12 @@ body
     background: black;
 }
 .container{
-    width: 100%;
+    width: 50%;
     height: 100%;
 }
-
+.gh{
+    color:red
+}
 .hello{
     color: red;
 }
